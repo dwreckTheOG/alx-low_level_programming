@@ -48,7 +48,7 @@ int len(char *str)
 	while (*str != '\0')
 	{
 		total++;
-		*str++;
+		str++;
 	}
 	return (total);
 }
