@@ -1,8 +1,14 @@
 #include "main.h"
 
+/**
+ * alloc_grid - Allocates a 2D array of integers.
+ * @width: The width of the grid.
+ * @height: The height of the grid.
+ *
+ * Return: A pointer to the 2D array, or NULL on failure or invalid input.
+ */
 int **alloc_grid(int width, int height)
 {
-	int x, y;
 	int sw = 0, sh = 0;
 	int **array;
 
@@ -28,7 +34,8 @@ int **alloc_grid(int width, int height)
 			array[sw][sh] = 0;
 			sh++;
 		}
-		sw ++;
+		sh = 0;
+		sw++;
 	}
 	return (array);
 }
